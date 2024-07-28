@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 id="title1" style="visibility: hidden">Title1</h3>
+    <h3 id="title2" style="visibility: hidden">Title2</h3>
+    <h3 id="title3" style="visibility: hidden">Title3</h3>
+    <h3 id="title4" style="visibility: hidden">Title4</h3>
+  </body>
+  <script>
+    // setTimeout(() => {
+    //   document.getElementById("title1").style.visibility = "visible";
+    // }, 5000);
+    let p = new Promise((resolve, reject) => {
+      console.log("starting here");
+      setTimeout(() => {
+        document.getElementById("title1").style.visibility = "visible";
+      }, 2000);
+      resolve();
+      //   isSucess = true;
+      //   if (isSucess) {
+      //     console.log("calling resolve");
+      //     resolve();
+      //   } else {
+      //     console.log("calling reject");
+      //     reject();
+      //   }
+    });
+    console.log("after promise creation");
+    p.then(() => {
+      console.log("calling then");
+    }).catch(() => {
+      console.log("error");
+    });
+  </script>
+</html>

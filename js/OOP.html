@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Animal {
+      constructor(thisName, thisColor) {
+        this.name = thisName;
+        this.color = thisColor;
+      }
+      move() {
+        console.log("Moving");
+      }
+    }
+
+    let lion = new Animal("Lion", "Brown");
+    console.log(lion.color);
+    console.log(lion.name);
+    lion.move();
+  </script>
+</html>
